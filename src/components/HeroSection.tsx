@@ -38,7 +38,7 @@ export const HeroSection = () => {
       />
 
       {/* Dark Professional Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/85 to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/50 to-background/40" />
 
       {/* Subtle Gradient Accent */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
