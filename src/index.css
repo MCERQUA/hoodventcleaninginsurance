@@ -8,58 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Deep Ocean Base */
-    --background: 210 60% 8%;
-    --foreground: 180 100% 98%;
+    /* Professional Industrial Base */
+    --background: 210 20% 15%;
+    --foreground: 0 0% 98%;
 
-    /* Glassmorphic Surfaces */
-    --card: 210 50% 12%;
-    --card-foreground: 180 100% 98%;
+    /* Professional Surfaces */
+    --card: 210 18% 20%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 55% 10%;
-    --popover-foreground: 180 100% 98%;
+    --popover: 210 18% 18%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Electric Cyan Primary */
-    --primary: 190 100% 50%;
-    --primary-foreground: 210 60% 8%;
+    /* Trustworthy Teal Primary */
+    --primary: 174 63% 35%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Plasma Purple Secondary */
-    --secondary: 290 75% 45%;
-    --secondary-foreground: 180 100% 98%;
+    /* Professional Steel Blue Secondary */
+    --secondary: 210 29% 29%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Muted Glass */
-    --muted: 210 40% 20%;
-    --muted-foreground: 180 50% 70%;
+    /* Muted Professional */
+    --muted: 210 15% 25%;
+    --muted-foreground: 210 10% 65%;
 
-    /* Neon Lime Accent */
-    --accent: 75 100% 50%;
-    --accent-foreground: 210 60% 8%;
+    /* Safety Orange Accent */
+    --accent: 27 87% 52%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 180 100% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    /* Glass Borders */
-    --border: 180 40% 30%;
-    --input: 210 40% 20%;
-    --ring: 190 100% 50%;
+    /* Professional Borders */
+    --border: 210 15% 30%;
+    --input: 210 15% 25%;
+    --ring: 174 63% 40%;
 
     --radius: 1.25rem;
 
-    /* Custom Glassmorphic Tokens */
+    /* Custom Professional Tokens */
     --glass-bg-light: 255 255 255;
-    --glass-bg-dark: 10 25 41;
+    --glass-bg-dark: 33 44 52;
     --glass-border: 255 255 255;
-    
-    /* Gradient Mesh Colors */
-    --gradient-1: 210 60% 8%;
-    --gradient-2: 190 80% 20%;
-    --gradient-3: 290 60% 25%;
-    --gradient-4: 210 50% 15%;
 
-    /* Glow Effects */
-    --glow-cyan: 190 100% 50%;
-    --glow-purple: 290 75% 45%;
-    --glow-lime: 75 100% 50%;
+    /* Professional Gradient Colors */
+    --gradient-1: 210 20% 15%;
+    --gradient-2: 174 35% 25%;
+    --gradient-3: 210 25% 20%;
+    --gradient-4: 210 18% 18%;
+
+    /* Subtle Professional Highlights */
+    --highlight-teal: 174 63% 35%;
+    --highlight-steel: 210 29% 29%;
+    --highlight-orange: 27 87% 52%;
 
     /* Animation Timing */
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -132,26 +132,26 @@ All colors MUST be HSL.
     50% { opacity: 0.9; }
   }
 
-  /* Glow Effects */
-  .glow-cyan {
-    box-shadow: 0 0 20px hsl(var(--glow-cyan) / 0.5),
-                0 0 40px hsl(var(--glow-cyan) / 0.3);
+  /* Subtle Professional Highlights */
+  .highlight-teal {
+    box-shadow: 0 0 15px hsl(var(--highlight-teal) / 0.3),
+                0 0 25px hsl(var(--highlight-teal) / 0.15);
   }
 
-  .glow-purple {
-    box-shadow: 0 0 20px hsl(var(--glow-purple) / 0.5),
-                0 0 40px hsl(var(--glow-purple) / 0.3);
+  .highlight-steel {
+    box-shadow: 0 0 15px hsl(var(--highlight-steel) / 0.3),
+                0 0 25px hsl(var(--highlight-steel) / 0.15);
   }
 
-  .glow-lime {
-    box-shadow: 0 0 20px hsl(var(--glow-lime) / 0.5),
-                0 0 40px hsl(var(--glow-lime) / 0.3);
+  .highlight-orange {
+    box-shadow: 0 0 15px hsl(var(--highlight-orange) / 0.3),
+                0 0 25px hsl(var(--highlight-orange) / 0.15);
   }
 
   /* Text Effects */
-  .text-glow {
-    text-shadow: 0 0 30px hsl(var(--primary) / 0.5),
-                 0 0 60px hsl(var(--primary) / 0.3);
+  .text-highlight {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.3),
+                 0 0 30px hsl(var(--primary) / 0.15);
   }
 
   /* Particle Background */
