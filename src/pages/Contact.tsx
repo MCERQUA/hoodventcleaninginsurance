@@ -1,11 +1,35 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form) as any).toString(),
+    })
+      .then(() => setIsSubmitted(true))
+      .catch((error) => alert(error));
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Hidden form for Netlify */}
+      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <textarea name="message"></textarea>
+      </form>
+
       <Navigation />
       
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -40,50 +64,101 @@ const Contact = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="glass-strong rounded-3xl p-8 border border-white/20"
             >
-              <h2 className="text-3xl font-bold mb-8">Send Us a Message</h2>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-xl glass-card border border-white/20 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 rounded-xl glass-card border border-white/20 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Phone</label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 rounded-xl glass-card border border-white/20 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="(123) 456-7890"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
-                  <textarea
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-xl glass-card border border-white/20 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                    placeholder="Tell us about your needs..."
-                  />
-                </div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  type="submit"
-                  className="w-full px-8 py-4 rounded-2xl bg-accent text-accent-foreground font-bold text-lg glow-lime flex items-center justify-center space-x-2"
+              {!isSubmitted ? (
+                <>
+                  <h2 className="text-3xl font-bold mb-8">Send Us a Message</h2>
+                  <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p className="hidden">
+                      <label>
+                        Don't fill this out: <input name="bot-field" />
+                      </label>
+                    </p>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 rounded-xl glass-card border border-white/20 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 rounded-xl glass-card border border-white/20 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        className="w-full px-4 py-3 rounded-xl glass-card border border-white/20 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                        placeholder="(123) 456-7890"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Message</label>
+                      <textarea
+                        name="message"
+                        rows={5}
+                        required
+                        className="w-full px-4 py-3 rounded-xl glass-card border border-white/20 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                        placeholder="Tell us about your needs..."
+                      />
+                    </div>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      type="submit"
+                      className="w-full px-8 py-4 rounded-2xl bg-accent text-accent-foreground font-bold text-lg highlight-orange flex items-center justify-center space-x-2"
+                    >
+                      <span>Send Message</span>
+                      <Send className="w-5 h-5" />
+                    </motion.button>
+                  </form>
+                </>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-12"
                 >
-                  <span>Send Message</span>
-                  <Send className="w-5 h-5" />
-                </motion.button>
-              </form>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", duration: 0.8 }}
+                    className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center highlight-teal"
+                  >
+                    <CheckCircle className="w-12 h-12 text-white" />
+                  </motion.div>
+                  <h3 className="text-3xl font-bold mb-4">Message Sent!</h3>
+                  <p className="text-xl text-muted-foreground mb-8">
+                    Thank you for contacting us. We'll get back to you within 24 hours.
+                  </p>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setIsSubmitted(false)}
+                    className="px-8 py-3 rounded-xl bg-primary text-primary-foreground font-semibold"
+                  >
+                    Send Another Message
+                  </motion.button>
+                </motion.div>
+              )}
             </motion.div>
 
             {/* Contact Info */}
