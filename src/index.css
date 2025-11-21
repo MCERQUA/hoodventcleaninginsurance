@@ -19,8 +19,8 @@ All colors MUST be HSL.
     --popover: 210 18% 18%;
     --popover-foreground: 0 0% 98%;
 
-    /* Trustworthy Teal Primary */
-    --primary: 174 63% 35%;
+    /* Baby Blue Primary */
+    --primary: 207 89% 61%;
     --primary-foreground: 0 0% 100%;
 
     /* Professional Steel Blue Secondary */
@@ -52,12 +52,12 @@ All colors MUST be HSL.
 
     /* Professional Gradient Colors */
     --gradient-1: 210 20% 15%;
-    --gradient-2: 174 35% 25%;
+    --gradient-2: 207 45% 35%;
     --gradient-3: 210 25% 20%;
     --gradient-4: 210 18% 18%;
 
     /* Subtle Professional Highlights */
-    --highlight-teal: 174 63% 35%;
+    --highlight-blue: 207 89% 61%;
     --highlight-steel: 210 29% 29%;
     --highlight-orange: 27 87% 52%;
 
@@ -133,9 +133,14 @@ All colors MUST be HSL.
   }
 
   /* Subtle Professional Highlights */
-  .highlight-teal {
-    box-shadow: 0 0 15px hsl(var(--highlight-teal) / 0.3),
-                0 0 25px hsl(var(--highlight-teal) / 0.15);
+  .highlight-blue {
+    box-shadow: 0 0 15px hsl(var(--highlight-blue) / 0.3),
+                0 0 25px hsl(var(--highlight-blue) / 0.15);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px hsl(var(--highlight-blue) / 0.5),
+                0 0 40px hsl(var(--highlight-blue) / 0.3);
   }
 
   .highlight-steel {
