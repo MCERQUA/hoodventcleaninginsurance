@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- Professional Hood Vent Icon with Industrial Colors -->
+    <defs>
+        <linearGradient id="hoodGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#16a085;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#138d75;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="ductGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#34495e;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- Background Circle -->
+    <circle cx="64" cy="64" r="60" fill="#2c3e50"/>
+
+    <!-- Hood Canopy -->
+    <path d="M25 50 L64 35 L103 50 L103 68 L25 68 Z" fill="url(#hoodGradient)" stroke="#138d75" stroke-width="2"/>
+
+    <!-- Duct System -->
+    <rect x="56" y="15" width="16" height="25" fill="url(#ductGradient)" rx="2" stroke="#1a252f" stroke-width="1"/>
+    <rect x="58" y="30" width="12" height="8" fill="#16a085" opacity="0.8"/>
+
+    <!-- Filter Lines/Vents -->
+    <line x1="35" y1="55" x2="93" y2="55" stroke="#fff" stroke-width="2" opacity="0.6"/>
+    <line x1="35" y1="60" x2="93" y2="60" stroke="#fff" stroke-width="2" opacity="0.6"/>
+    <line x1="35" y1="65" x2="93" y2="65" stroke="#fff" stroke-width="2" opacity="0.6"/>
+
+    <!-- Exhaust Indicator (Orange Accent) -->
+    <path d="M64 68 L64 85" stroke="#e67e22" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <path d="M60 75 L68 75" stroke="#e67e22" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <path d="M62 80 L66 80" stroke="#e67e22" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Base Mount -->
+    <rect x="54" y="85" width="20" height="8" fill="#34495e" rx="2" stroke="#1a252f" stroke-width="1"/>
+
+    <!-- Shield Outline (Professional Touch) -->
+    <path d="M25 50 L64 35 L103 50 L103 68 L25 68 Z"
+          fill="none"
+          stroke="#16a085"
+          stroke-width="2"
+          opacity="0.8"/>
+
+    <!-- Subtle Shine Effect -->
+    <path d="M30 52 L35 50 L35 62 L30 64 Z" fill="#fff" opacity="0.15"/>
+    <circle cx="70" cy="58" r="8" fill="#fff" opacity="0.1"/>
+
+    <style>
+        @media (prefers-color-scheme: dark) {
+            circle { fill: #1a252f; }
+        }
+    </style>
+</svg>
