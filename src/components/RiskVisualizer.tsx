@@ -9,6 +9,7 @@ const riskFactors = [
     coverage: "$500K",
     color: "from-red-500 to-orange-500",
     glow: "shadow-[0_0_30px_rgba(239,68,68,0.5)]",
+    image: "https://images.unsplash.com/photo-1577819968698-9e1c6ecb99e7?w=800&q=80",
   },
   {
     icon: Droplet,
@@ -17,6 +18,7 @@ const riskFactors = [
     coverage: "$250K",
     color: "from-yellow-500 to-amber-500",
     glow: "shadow-[0_0_30px_rgba(234,179,8,0.5)]",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
   },
   {
     icon: Thermometer,
@@ -25,6 +27,7 @@ const riskFactors = [
     coverage: "$300K",
     color: "from-orange-500 to-red-500",
     glow: "shadow-[0_0_30px_rgba(249,115,22,0.5)]",
+    image: "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800&q=80",
   },
   {
     icon: Zap,
@@ -33,6 +36,7 @@ const riskFactors = [
     coverage: "$200K",
     color: "from-blue-500 to-cyan-500",
     glow: "shadow-[0_0_30px_rgba(59,130,246,0.5)]",
+    image: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80",
   },
   {
     icon: Wind,
@@ -41,6 +45,7 @@ const riskFactors = [
     coverage: "$600K",
     color: "from-cyan-500 to-blue-500",
     glow: "shadow-[0_0_30px_rgba(6,182,212,0.5)]",
+    image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
   },
   {
     icon: Clock,
@@ -49,6 +54,7 @@ const riskFactors = [
     coverage: "$150K",
     color: "from-purple-500 to-pink-500",
     glow: "shadow-[0_0_30px_rgba(168,85,247,0.5)]",
+    image: "https://images.unsplash.com/photo-1556909114-1804293f9e4d?w=800&q=80",
   },
 ];
 
@@ -91,13 +97,22 @@ export const RiskVisualizer = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               className="relative group"
             >
-              <div className={`glass-strong rounded-3xl p-6 border border-white/20 transition-all duration-500 hover:${risk.glow}`}>
-                {/* Icon */}
+              <div className={`relative overflow-hidden glass-strong rounded-3xl p-6 border border-white/20 transition-all duration-500 hover:${risk.glow}`}>
+                {/* Background Image */}
                 <div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${risk.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <risk.icon className="w-8 h-8 text-white" />
-                </div>
+                  className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                  style={{ backgroundImage: `url('${risk.image}')` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-background/80 to-background/60" />
+
+                {/* Content */}
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${risk.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <risk.icon className="w-8 h-8 text-white" />
+                  </div>
 
                 {/* Title */}
                 <h3 className="text-xl font-bold mb-2">{risk.title}</h3>
@@ -126,11 +141,12 @@ export const RiskVisualizer = () => {
                   </div>
                 </div>
 
-                {/* Coverage Amount */}
-                <div className="pt-4 border-t border-white/10">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">Coverage</span>
-                    <span className="text-lg font-bold text-accent">{risk.coverage}</span>
+                  {/* Coverage Amount */}
+                  <div className="pt-4 border-t border-white/10">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">Coverage</span>
+                      <span className="text-lg font-bold text-accent">{risk.coverage}</span>
+                    </div>
                   </div>
                 </div>
 

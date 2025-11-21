@@ -29,34 +29,42 @@ const floatingCards = [
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Gradient Mesh Background */}
-      <div className="absolute inset-0 gradient-mesh" />
-      <ParticleField />
+      {/* Commercial Kitchen Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1920&q=80')",
+        }}
+      />
 
-      {/* Glass Orbs */}
+      {/* Dark Professional Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/85 to-background/80" />
+
+      {/* Subtle Gradient Accent */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
+
+      {/* Subtle Professional Highlights */}
       <motion.div
         animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
+          opacity: [0.3, 0.5, 0.3],
         }}
         transition={{
-          duration: 20,
+          duration: 8,
           repeat: Infinity,
-          ease: "linear",
+          ease: "easeInOut",
         }}
-        className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-3xl"
+        className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-gradient-to-br from-primary/15 to-transparent blur-3xl"
       />
       <motion.div
         animate={{
-          scale: [1.2, 1, 1.2],
-          rotate: [360, 180, 0],
+          opacity: [0.3, 0.5, 0.3],
         }}
         transition={{
-          duration: 25,
+          duration: 10,
           repeat: Infinity,
-          ease: "linear",
+          ease: "easeInOut",
         }}
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-accent/10 to-transparent blur-3xl"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
@@ -69,14 +77,13 @@ export const HeroSection = () => {
             className="mb-6"
           >
             <motion.h1
-              className="text-6xl md:text-8xl font-black mb-4 leading-tight"
-              style={{ fontFamily: "'Orbitron', sans-serif" }}
+              className="text-5xl md:text-7xl font-bold mb-4 leading-tight"
             >
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent text-glow">
-                NEXT-GEN
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Hood Vent Contractor
               </span>
               <br />
-              <span className="text-foreground">PROTECTION</span>
+              <span className="text-foreground font-black">Insurance</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
@@ -84,7 +91,7 @@ export const HeroSection = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto"
             >
-              Insurance Reimagined for Modern Commercial Kitchens
+              Specialized Coverage for Commercial Kitchen Exhaust System Professionals
             </motion.p>
           </motion.div>
 
