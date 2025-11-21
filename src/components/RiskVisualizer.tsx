@@ -9,7 +9,7 @@ const riskFactors = [
     coverage: "$500K",
     color: "from-red-500 to-orange-500",
     glow: "shadow-[0_0_30px_rgba(239,68,68,0.5)]",
-    image: "https://images.unsplash.com/photo-1577819968698-9e1c6ecb99e7?w=800&q=80",
+    image: "/risk-images/fire-hazard.png",
   },
   {
     icon: Droplet,
@@ -18,7 +18,7 @@ const riskFactors = [
     coverage: "$250K",
     color: "from-yellow-500 to-amber-500",
     glow: "shadow-[0_0_30px_rgba(234,179,8,0.5)]",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    image: "/risk-images/grease-buildup.png",
   },
   {
     icon: Thermometer,
@@ -27,7 +27,7 @@ const riskFactors = [
     coverage: "$300K",
     color: "from-orange-500 to-red-500",
     glow: "shadow-[0_0_30px_rgba(249,115,22,0.5)]",
-    image: "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800&q=80",
+    image: "/risk-images/heat-damage.png",
   },
   {
     icon: Zap,
@@ -36,7 +36,7 @@ const riskFactors = [
     coverage: "$200K",
     color: "from-blue-500 to-cyan-500",
     glow: "shadow-[0_0_30px_rgba(59,130,246,0.5)]",
-    image: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80",
+    image: "/risk-images/electrical-risk.png",
   },
   {
     icon: Wind,
@@ -45,7 +45,7 @@ const riskFactors = [
     coverage: "$600K",
     color: "from-cyan-500 to-blue-500",
     glow: "shadow-[0_0_30px_rgba(6,182,212,0.5)]",
-    image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
+    image: "/risk-images/ventilation-failure.png",
   },
   {
     icon: Clock,
@@ -54,7 +54,7 @@ const riskFactors = [
     coverage: "$150K",
     color: "from-purple-500 to-pink-500",
     glow: "shadow-[0_0_30px_rgba(168,85,247,0.5)]",
-    image: "https://images.unsplash.com/photo-1556909114-1804293f9e4d?w=800&q=80",
+    image: "/risk-images/wear-tear.png",
   },
 ];
 
