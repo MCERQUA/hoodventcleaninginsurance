@@ -8,7 +8,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
+    <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-24 pb-12 md:pt-16 md:pb-0">
       {/* Dynamic Background */}
       <div className="absolute inset-0 bg-background">
         {/* Background Image Layer */}

@@ -145,64 +145,84 @@ export const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      </motion.nav>
+
+      {/* Mobile Menu - Outside nav for proper z-index */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 bg-background lg:hidden flex flex-col overflow-hidden z-[55]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-background lg:hidden z-[100]"
           >
-            {/* Spacer for header */}
-            <div className="h-20 flex-shrink-0" />
-            {/* Scrollable content */}
-            <div className="flex-1 overflow-y-auto px-6 pb-6">
-            <div className="space-y-6">
-              {navItems.map((item) => (
-                <div key={item.title}>
-                  {item.items ? (
-                    <div className="space-y-3">
-                      <div className="font-bold text-lg text-white/50 uppercase tracking-wider text-xs">
-                        {item.title}
-                      </div>
-                      <div className="grid gap-3 pl-4 border-l border-white/10">
-                        {item.items.map((subItem) => (
-                          <Link
-                            key={subItem.href}
-                            to={subItem.href}
-                            className="block text-lg font-medium text-white"
-                          >
-                            {subItem.title}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href!}
-                      className="block text-2xl font-bold text-white"
-                    >
-                      {item.title}
-                    </Link>
-                  )}
+            {/* Header with close button */}
+            <div className="flex items-center justify-between px-6 py-4">
+              <Link to="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">H</span>
                 </div>
-              ))}
-              
-              <div className="pt-8 mt-8 border-t border-white/10">
-                <Link to="/contact" className="block w-full">
-                  <button className="w-full py-4 bg-primary text-white font-bold rounded-xl text-lg">
-                    Get Instant Quote
-                  </button>
-                </Link>
-              </div>
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold tracking-tight text-white leading-none">HoodVent</span>
+                  <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Insurance</span>
+                </div>
+              </Link>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 text-white"
+              >
+                <X className="w-6 h-6" />
+              </button>
             </div>
+
+            {/* Scrollable content */}
+            <div className="overflow-y-auto px-6 pb-6" style={{ height: 'calc(100vh - 80px)' }}>
+              <div className="space-y-6">
+                {navItems.map((item) => (
+                  <div key={item.title}>
+                    {item.items ? (
+                      <div className="space-y-3">
+                        <div className="font-bold text-white/50 uppercase tracking-wider text-xs">
+                          {item.title}
+                        </div>
+                        <div className="grid gap-3 pl-4 border-l border-white/10">
+                          {item.items.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              to={subItem.href}
+                              className="block text-lg font-medium text-white"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {subItem.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        to={item.href!}
+                        className="block text-2xl font-bold text-white"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+
+                <div className="pt-8 mt-8 border-t border-white/10">
+                  <Link to="/contact" className="block w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                    <button className="w-full py-4 bg-primary text-white font-bold rounded-xl text-lg">
+                      Get Instant Quote
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-          </motion.nav>
-        </>
-      );
-    };
+    </>
+  );
+};
