@@ -24,5 +24,37 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Hidden Netlify Form for Quote Wizard -->
+    <form name="quote-wizard" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="quote-wizard" />
+      <input type="text" name="businessName" />
+      <input type="text" name="fein" />
+      <input type="text" name="address" />
+      <input type="text" name="city" />
+      <input type="text" name="state" />
+      <input type="text" name="zip" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      
+      <!-- Last 12 Months -->
+      <input type="number" name="actualGrossSales" />
+      <input type="number" name="subcontractingCosts" />
+      <input type="number" name="numEmployees" />
+      <input type="number" name="employeePayroll" />
+      <input type="number" name="numProjects" />
+      <input type="number" name="largestJobAmount" />
+      <textarea name="largestJobDescription"></textarea>
+      
+      <!-- Next 12 Months -->
+      <input type="number" name="estimatedGross" />
+      <input type="number" name="estimatedSubcontractingCosts" />
+      <input type="number" name="estimatedNumEmployees" />
+      <input type="number" name="estimatedEmployeePayroll" />
+      <input type="number" name="estimatedOwnerPayrollDraw" />
+      <input type="number" name="estimatedMaterialCosts" />
+      <input type="number" name="exampleUpcomingJobAmount" />
+      <textarea name="exampleUpcomingJobDescription"></textarea>
+    </form>
   </body>
 </html>

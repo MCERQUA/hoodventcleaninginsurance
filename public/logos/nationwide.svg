@@ -1,0 +1,5 @@
+<svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <rect x="30" y="10" width="30" height="30" rx="4" fill="#005596"/>
+  <text x="45" y="32" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="white" text-anchor="middle">N</text>
+  <text x="70" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#333">Nationwide</text>
+</svg>

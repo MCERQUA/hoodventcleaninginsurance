@@ -172,7 +172,7 @@ const Contact = () => {
                 <h2 className="text-3xl font-bold mb-8">Contact Information</h2>
                 <div className="space-y-6">
                   <motion.a
-                    href="tel:+1234567890"
+                    href="tel:844-967-5247"
                     whileHover={{ x: 10 }}
                     className="flex items-center space-x-4 group"
                   >
@@ -181,12 +181,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">Phone</div>
-                      <div className="text-lg font-semibold">(123) 456-7890</div>
+                      <div className="text-lg font-semibold">844-967-5247</div>
                     </div>
                   </motion.a>
 
                   <motion.a
-                    href="mailto:info@hoodventinsurance.com"
+                    href="mailto:josh@contractorschoiceagency.co"
                     whileHover={{ x: 10 }}
                     className="flex items-center space-x-4 group"
                   >
@@ -195,7 +195,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">Email</div>
-                      <div className="text-lg font-semibold">info@hoodventinsurance.com</div>
+                      <div className="text-lg font-semibold">josh@contractorschoiceagency.co</div>
                     </div>
                   </motion.a>
 
@@ -209,8 +209,9 @@ const Contact = () => {
                     <div>
                       <div className="text-sm text-muted-foreground">Address</div>
                       <div className="text-lg font-semibold">
-                        123 Insurance Way, Suite 100<br />
-                        San Francisco, CA 94105
+                        12220 E Riggs Road<br/>
+                        Suite #105<br/>
+                        Chandler, AZ 85249
                       </div>
                     </div>
                   </motion.div>
