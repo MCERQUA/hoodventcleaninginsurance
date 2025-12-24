@@ -15,8 +15,8 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SEO 
-        title="HoodVent Insurance | #1 Rated for Commercial Kitchen Contractors" 
-        description="Specialized general liability and pollution insurance for hood cleaning, fire suppression, and grease trap contractors. Get a quote in minutes."
+        title="Hood Vent Cleaning Insurance | #1 Rated for Kitchen Exhaust Contractors"
+        description="Specialized liability insurance for hood vent cleaning contractors. NFPA 96 compliant coverage for commercial kitchen exhaust cleaning professionals. Get a quote in minutes."
       />
       <Navigation />
       

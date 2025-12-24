@@ -31,7 +31,7 @@ const About = () => {
             >
               About{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                HoodVentInsurance
+                Hood Vent Cleaning Insurance
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -71,7 +71,7 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-xl text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed">
-              At HoodVentInsurance.com, we're revolutionizing commercial kitchen insurance through advanced technology, 
+              At HoodVentCleaningInsurance.com, we're revolutionizing commercial kitchen insurance through advanced technology, 
               real-time risk assessment, and unparalleled customer service. Our mission is to provide comprehensive protection 
               that adapts to your needs, ensuring your kitchen operations remain safe, compliant, and worry-free.
             </p>

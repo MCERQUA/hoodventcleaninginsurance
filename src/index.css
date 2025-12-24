@@ -83,3 +83,74 @@
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
 }
+
+/* Blog Post Styling */
+.blog-content {
+  @apply text-muted-foreground leading-relaxed;
+}
+
+.blog-content h2 {
+  @apply text-2xl font-bold text-white mt-10 mb-4;
+}
+
+.blog-content h3 {
+  @apply text-xl font-semibold text-white mt-8 mb-3;
+}
+
+.blog-content p {
+  @apply mb-6;
+}
+
+.blog-content ul, .blog-content ol {
+  @apply mb-6 pl-6 space-y-2;
+}
+
+.blog-content ul {
+  @apply list-disc;
+}
+
+.blog-content ol {
+  @apply list-decimal;
+}
+
+.blog-content li {
+  @apply text-muted-foreground;
+}
+
+.blog-content a {
+  @apply text-primary hover:underline;
+}
+
+.blog-content table {
+  @apply w-full my-6 rounded-xl overflow-hidden;
+}
+
+.blog-content th, .blog-content td {
+  @apply text-left;
+}
+
+.blog-content strong {
+  @apply text-white;
+}
+
+/* Featured Snippet Box */
+.blog-content .snippet-box {
+  @apply bg-primary/10 border border-primary/30 rounded-2xl p-6 mb-8;
+}
+
+.blog-content .snippet-box h2 {
+  @apply text-xl font-bold text-primary mt-0 mb-3;
+}
+
+.blog-content .snippet-box p {
+  @apply text-white mb-0;
+}
+
+/* Blog Images */
+.blog-content .blog-image {
+  @apply w-full rounded-xl my-8 border border-white/10;
+}
+
+.blog-content .blog-image-caption {
+  @apply text-sm text-muted-foreground text-center mt-2 italic;
+}

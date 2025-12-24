@@ -32,7 +32,7 @@ const ServicePageTemplate = () => {
       <SEO
         title={serviceData.metaTitle}
         description={serviceData.metaDescription}
-        canonical={`https://hoodventinsurance.com${serviceData.slug}`}
+        canonical={`https://hoodventcleaninginsurance.com${serviceData.slug}`}
       />
       <Navigation />
 

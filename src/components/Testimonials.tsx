@@ -5,7 +5,7 @@ const reviews = [
   {
     name: "Mike R.",
     company: "Clean Hoods Chicago",
-    text: "My local agent had me classified as a 'janitor'. HoodVent found the mistake, got me the right NFPA 96 coverage, and actually SAVED me $1,200 a year.",
+    text: "My local agent had me classified as a 'janitor'. They found the mistake, got me the right NFPA 96 coverage, and actually SAVED me $1,200 a year.",
     rating: 5
   },
   {

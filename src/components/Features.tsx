@@ -15,7 +15,7 @@ export const Features = () => {
           >
             <h2 className="text-3xl md:text-5xl font-black mb-6 text-white">
               Why 2,400+ Contractors <br />
-              <span className="text-primary">Trust HoodVent</span>
+              <span className="text-primary">Trust Us</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
               We aren't a generalist agency. We live and breathe NFPA 96 compliance. We know the difference between a grease trap and a hood plenum.

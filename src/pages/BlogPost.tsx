@@ -18,7 +18,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title={`${post.title} | HoodVent Blog`}
+        title={`${post.title} | Hood Vent Cleaning Insurance Blog`}
         description={post.excerpt}
       />
       <Navigation />
@@ -69,8 +69,8 @@ const BlogPost = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
 
-            <div 
-              className="prose prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground"
+            <div
+              className="blog-content"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </motion.div>

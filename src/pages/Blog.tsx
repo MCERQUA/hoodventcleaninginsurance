@@ -10,7 +10,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Insurance Blog for Hood Cleaners | HoodVent Insurance" 
+        title="Insurance Blog for Hood Cleaners | Hood Vent Cleaning Insurance" 
         description="Tips, guides, and industry news for commercial kitchen exhaust contractors."
       />
       <Navigation />

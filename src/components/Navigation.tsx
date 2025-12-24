@@ -58,8 +58,8 @@ export const Navigation = () => {
               <span className="text-white font-bold text-xl">H</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-white leading-none">
-                HoodVent
+              <span className="text-lg font-bold tracking-tight text-white leading-none">
+                Hood Vent Cleaning
               </span>
               <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">
                 Insurance
@@ -164,7 +164,7 @@ export const Navigation = () => {
                   <span className="text-white font-bold text-xl">H</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold tracking-tight text-white leading-none">HoodVent</span>
+                  <span className="text-lg font-bold tracking-tight text-white leading-none">Hood Vent Cleaning</span>
                   <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Insurance</span>
                 </div>
               </Link>
