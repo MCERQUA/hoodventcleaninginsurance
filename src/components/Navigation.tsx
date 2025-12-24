@@ -121,12 +121,12 @@ export const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            <a 
-              href="tel:+18005550199" 
+            <a
+              href="tel:8449675247"
               className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-white transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>(800) 555-0199</span>
+              <span>844-967-5247</span>
             </a>
             <Link to="/contact">
               <button className="px-6 py-2.5 bg-primary hover:bg-primary/90 text-white text-sm font-bold rounded-xl transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5">
@@ -153,8 +153,12 @@ export const Navigation = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 bg-background/95 backdrop-blur-xl z-40 lg:hidden flex flex-col pt-24 px-6 overflow-y-auto"
+            className="fixed inset-0 bg-background lg:hidden flex flex-col overflow-hidden z-[55]"
           >
+            {/* Spacer for header */}
+            <div className="h-20 flex-shrink-0" />
+            {/* Scrollable content */}
+            <div className="flex-1 overflow-y-auto px-6 pb-6">
             <div className="space-y-6">
               {navItems.map((item) => (
                 <div key={item.title}>
@@ -193,6 +197,7 @@ export const Navigation = () => {
                   </button>
                 </Link>
               </div>
+            </div>
             </div>
           </motion.div>
         )}
