@@ -117,24 +117,31 @@ export const FAQ = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {faqCategories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => {
-                setActiveTab(cat.id);
-                setOpenIndex(0);
-              }}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all ${
-                activeTab === cat.id
-                  ? "bg-primary text-white shadow-lg shadow-primary/25"
-                  : "bg-white/5 text-muted-foreground hover:bg-white/10 hover:text-white"
-              }`}
-            >
-              <cat.icon className="w-5 h-5" />
-              {cat.label}
-            </button>
-          ))}
+        <div className="max-w-3xl mx-auto mb-8">
+          <div className="bg-white/5 rounded-2xl p-1.5 border border-white/10">
+            <div className="grid grid-cols-3 gap-1">
+              {faqCategories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => {
+                    setActiveTab(cat.id);
+                    setOpenIndex(0);
+                  }}
+                  className={`relative flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 px-3 py-3 md:py-3 rounded-xl font-bold transition-all text-center ${
+                    activeTab === cat.id
+                      ? "bg-primary text-white shadow-lg"
+                      : "text-muted-foreground hover:bg-white/5 hover:text-white"
+                  }`}
+                >
+                  <cat.icon className="w-5 h-5 flex-shrink-0" />
+                  <span className="text-xs md:text-sm leading-tight">{cat.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-3 md:hidden">
+            Tap a category above to see questions
+          </p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4 min-h-[400px]">
